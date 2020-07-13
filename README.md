@@ -7,4 +7,4 @@ the site lets you load only the last 100 messages in the group so it wouldn't ge
 All rights reserved to Alon Gabai.
 
 See the design:
-https://www.behance.net/gallery/100590423/Messaging-App?
+https://www.behance.net/gallery/100590423/Messaging-App
