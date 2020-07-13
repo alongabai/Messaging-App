@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Alon's Chat App</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <script src="https://kit.fontawesome.com/c7958625a3.js" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+  </head>
+  <body id="body">
+    <div id = "background">
+      <table id= "inside"><tr>
+        <td id="chat-bar">
+          <input type="text" id="search" name="search"></input><br />
+          <button class="chatroom" data-channel="family">Family</button>
+          <button class="chatroom" data-channel="work">Work</button>
+          <button class="chatroom" data-channel="tennis">Tennis group</button>
+          <i onclick="add_channel()" class="fas fa-plus fa-lg" id="newchannelbutton"></i><span onclick="add_channel()">   New Group</span>
+        </td>
+        <td style="vertical-align:top;">
+          <div id="chat">
+            <ul id="message-list">
+            </ul>
+          </div>
+          <form id="sendmessage" autocomplete="on"><input type="text" id="post-message" name="post-message" autocomplete="off"></input></form>
+        </td>
+      </tr></table>
+      <i onclick="change_name_open()" class="fas fa-cogs fa-lg" id="settings"></i>
+    </div>
+    <div id="close"><div class="blur">
+    <form id="namechange"><i onclick="change_name_close()" class="far fa-window-close fa-lg" id="back-button"></i><span id="change-name-text">Set screen name:</span><input type="text" id="name" name="name"></input><button type="submit" value="name" id="submit-name">submit</button> </form></div>
+    </div>
+    <div id="closeChannel" style="display:none;"><div class="blur">
+    <form id="addchannel"><i onclick="add_channel_close()" class="far fa-window-close fa-lg" id="back-button-channel"></i><span id="change-channelname-text">Set channel name:</span><input type="text" id="channelname" name="channelname"></input><button type="submit" value="channelname" id="submit-channel">submit</button> </form></div>
+    </div>
+  </body>
+</html>
